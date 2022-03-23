@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<profile>
+  <section name="Main">
+    <entry name="DbOracle">4</entry>
+    <entry name="UsernameOracle">gvc</entry>
+    <entry name="NameSpaceOracle">it.dedagroup.GVC.Repository.rtier.Service</entry>
+    <entry name="DirectoryDestinazioneOracle">C:\checked\GVC\Repository\rtier\Service\</entry>
+    <entry name="ConnectionStringOracle">ConnectionString</entry>
+    <entry name="EccezioniOracle">True</entry>
+    <entry name="PwdOracle">5Yok+iSZio5f6CHyx0TaUg==</entry>
+  </section>
+</profile>

@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<Tasks xmlns="http://tempuri.org/Tasks.xsd">
+  <ApplicationSettings>
+    <UICulture>it</UICulture>
+    <SelectionText />
+    <ApplicationTitle>GVC Client</ApplicationTitle>
+    <ApplicationConfigurationLocation />
+    <LayoutMode>2</LayoutMode>
+  </ApplicationSettings>
+  <VersionInfo>
+    <SchemaVersion>1</SchemaVersion>
+  </VersionInfo>
+  <TaskFileRoles>
+    <Roles>*</Roles>
+    <ID>0</ID>
+  </TaskFileRoles>
+  <VersionChangeTypes>
+    <ChangeTypeID>0</ChangeTypeID>
+    <Descrizione>Info</Descrizione>
+  </VersionChangeTypes>
+  <VersionChangeTypes>
+    <ChangeTypeID>1</ChangeTypeID>
+    <Descrizione>Feature</Descrizione>
+  </VersionChangeTypes>
+  <VersionChangeTypes>
+    <ChangeTypeID>2</ChangeTypeID>
+    <Descrizione>Improvement</Descrizione>
+  </VersionChangeTypes>
+  <VersionChangeTypes>
+    <ChangeTypeID>3</ChangeTypeID>
+    <Descrizione>BugFix</Descrizione>
+  </VersionChangeTypes>
+</Tasks>

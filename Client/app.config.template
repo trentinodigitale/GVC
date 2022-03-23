@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <section name="loggingConfiguration" type="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.LoggingSettings, Microsoft.Practices.EnterpriseLibrary.Logging"/>
+    <section name="exceptionHandling" type="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Configuration.ExceptionHandlingSettings, Microsoft.Practices.EnterpriseLibrary.ExceptionHandling"/>
+    <section name="dataConfiguration" type="Microsoft.Practices.EnterpriseLibrary.Data.Configuration.DatabaseSettings, Microsoft.Practices.EnterpriseLibrary.Data"/>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="Client.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <appSettings>
+    <add key="Configuration" value="{Environment}"/>
+    <add key="FullTrace" value="{FullTrace}"/>
+    <add key="DebugLoginEnabled" value="{DebugLoginEnabled}"/>
+    <add key="DebugLoginPassword" value="{DebugLoginPassword}"/>
+    <add key="CSVSeparatorChar" value=";"/>
+  </appSettings>
+  <system.diagnostics>
+    <sources>
+      <source name="System.ServiceModel" switchValue="Warning,ActivityTracing"
+        propagateActivity="true">
+        <listeners>
+          <add type="System.Diagnostics.DefaultTraceListener" name="Default">
+            <filter type="" />
+          </add>
+          <add name="ServiceModelTraceListener">
+            <filter type="" />
+          </add>
+        </listeners>
+      </source>
+      <source name="System.ServiceModel.MessageLogging" switchValue="Warning, ActivityTracing">
+        <listeners>
+          <add type="System.Diagnostics.DefaultTraceListener" name="Default">
+            <filter type="" />
+          </add>
+          <add name="ServiceModelMessageLoggingListener">
+            <filter type="" />
+          </add>
+        </listeners>
+      </source>
+    </sources>
+    <sharedListeners>
+      <add initializeData="{WCFTraceLog}" type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+        name="ServiceModelTraceListener" traceOutputOptions="Timestamp">
+        <filter type="" />
+      </add>
+      <add initializeData="{WCFMessageLog}" type="System.Diagnostics.XmlWriterTraceListener, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+        name="ServiceModelMessageLoggingListener" traceOutputOptions="Timestamp">
+        <filter type="" />
+      </add>
+    </sharedListeners>
+    <trace autoflush="true" />
+  </system.diagnostics>
+  <loggingConfiguration name="Logging Application Block" tracingEnabled="true" defaultCategory="General" logWarningsWhenNoCategoriesMatch="true">
+    <listeners>
+      <add source="Enterprise Library Logging" formatter="Text Formatter" log="Application" machineName="" listenerDataType="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.FormattedEventLogTraceListenerData, Microsoft.Practices.EnterpriseLibrary.Logging" traceOutputOptions="None" type="Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.FormattedEventLogTraceListener, Microsoft.Practices.EnterpriseLibrary.Logging" name="Formatted EventLog TraceListener"/>
+      <add fileName="{EnterpriseLibraryLog}" listenerDataType="Microsoft.Practices.EnterpriseLibrary.Logging.Configuration.XmlTraceListenerData, Microsoft.Practices.EnterpriseLibrary.Logging" traceOutputOptions="None" type="Microsoft.Practices.EnterpriseLibrary.Logging.TraceListeners.XmlTraceListener, Microsoft.Practices.EnterpriseLibrary.Logging" name="XML Trace Listener"/>
+    </listeners>
+    <formatters>
+      <add template="Timestamp: {timestamp}&#xD;&#xA;Message: {message}&#xD;&#xA;Category: {category}&#xD;&#xA;Priority: {priority}&#xD;&#xA;EventId: {eventid}&#xD;&#xA;Severity: {severity}&#xD;&#xA;Title:{title}&#xD;&#xA;Machine: {machine}&#xD;&#xA;Application Domain: {appDomain}&#xD;&#xA;Process Id: {processId}&#xD;&#xA;Process Name: {processName}&#xD;&#xA;Win32 Thread Id: {win32ThreadId}&#xD;&#xA;Thread Name: {threadName}&#xD;&#xA;Extended Properties: {dictionary({key} - {value}&#xD;&#xA;)}" type="Microsoft.Practices.EnterpriseLibrary.Logging.Formatters.TextFormatter, Microsoft.Practices.EnterpriseLibrary.Logging" name="Text Formatter"/>
+    </formatters>
+    <logFilters>
+      <add enabled="true" type="Microsoft.Practices.EnterpriseLibrary.Logging.Filters.LogEnabledFilter, Microsoft.Practices.EnterpriseLibrary.Logging" name="LogEnabled Filter"/>
+      <add categoryFilterMode="AllowAllExceptDenied" type="Microsoft.Practices.EnterpriseLibrary.Logging.Filters.CategoryFilter, Microsoft.Practices.EnterpriseLibrary.Logging" name="Category Filter"/>
+    </logFilters>
+    <categorySources>
+      <add switchValue="All" name="Exceptions">
+        <listeners>
+          <add name="Formatted EventLog TraceListener"/>
+        </listeners>
+      </add>
+      <add switchValue="All" name="General">
+        <listeners>
+          <add name="Formatted EventLog TraceListener"/>
+        </listeners>
+      </add>
+    </categorySources>
+    <specialSources>
+      <allEvents switchValue="All" name="All Events">
+        <listeners>
+          <add name="Formatted EventLog TraceListener"/>
+          <add name="XML Trace Listener"/>
+        </listeners>
+      </allEvents>
+      <notProcessed switchValue="All" name="Unprocessed Category">
+        <listeners>
+          <add name="Formatted EventLog TraceListener"/>
+          <add name="XML Trace Listener"/>
+        </listeners>
+      </notProcessed>
+      <errors switchValue="All" name="Logging Errors &amp; Warnings">
+        <listeners>
+          <add name="Formatted EventLog TraceListener"/>
+          <add name="XML Trace Listener"/>
+        </listeners>
+      </errors>
+    </specialSources>
+  </loggingConfiguration>
+  <exceptionHandling>
+    <exceptionPolicies>
+      <add name="User interface tier Policy">
+        <exceptionTypes>
+          <add type="System.Exception, mscorlib, Version=2.0.0.0, Culture=neutral" postHandlingAction="NotifyRethrow" name="Exception">
+            <exceptionHandlers>
+              <add logCategory="Exceptions" eventId="100" severity="Error" title="Enterprise Library Exception Handling" formatterType="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.XmlExceptionFormatter, Microsoft.Practices.EnterpriseLibrary.ExceptionHandling" priority="0" type="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.LoggingExceptionHandler, Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging" name="Logging Handler"/>
+            </exceptionHandlers>
+          </add>
+        </exceptionTypes>
+      </add>
+    </exceptionPolicies>
+  </exceptionHandling>
+  <dataConfiguration defaultDatabase="YourConnectionString" />
+  <userSettings>
+    <Client.Properties.Settings>
+      <setting name="SettingsVersion" serializeAs="String">
+        <value/>
+      </setting>
+    </Client.Properties.Settings>
+  </userSettings>
+  <system.serviceModel>
+    <diagnostics performanceCounters="Off">
+      <messageLogging logEntireMessage="true" logMalformedMessages="true"
+        logMessagesAtServiceLevel="false" logMessagesAtTransportLevel="true" />
+    </diagnostics>
+    <behaviors>
+      <endpointBehaviors>
+        <behavior name="NewBehavior">
+          <dataContractSerializer maxItemsInObjectGraph="2147483000"/>
+        </behavior>
+        <behavior name="ClientConfig">
+          <clientCredentials supportInteractive="false" type="InfoTN.ServiceModel.Security.ClientCredentials.SamlClientCredentials, InfoTN.ServiceModel"/>
+          <dataContractSerializer maxItemsInObjectGraph="2147483000"/>
+        </behavior>
+      </endpointBehaviors>
+      <serviceBehaviors>
+        <behavior name="NewBehavior">
+          <dataContractSerializer maxItemsInObjectGraph="2147483000"/>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <bindings>
+      <customBinding>
+        <binding name="UserNameAndSCT" receiveTimeout="15:00:00">
+          <security authenticationMode="SecureConversation" requireDerivedKeys="false" messageProtectionOrder="SignBeforeEncrypt" requireSecurityContextCancellation="true">
+            <localClientSettings maxClockSkew="00:40:00"/>
+            <localServiceSettings maxClockSkew="00:40:00" sessionKeyRenewalInterval="15:00:00"/>
+            <secureConversationBootstrap authenticationMode="UserNameOverTransport">
+              <localClientSettings maxClockSkew="00:40:00"/>
+              <localServiceSettings maxClockSkew="00:40:00"/>
+            </secureConversationBootstrap>
+          </security>
+          <textMessageEncoding/>
+          <httpsTransport/>
+        </binding>
+        <binding name="TokenBinding" receiveTimeout="00:11:00">
+          <security authenticationMode="IssuedToken" requireDerivedKeys="false" messageProtectionOrder="SignBeforeEncrypt">
+            <issuedTokenParameters tokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">
+              <issuer address="{TokenBindingIssuerAddress}" binding="customBinding" bindingConfiguration="UserNameAndSCT"/>
+              <issuerMetadata address="{TokenBindingIssuerAddressMex}"/>
+            </issuedTokenParameters>
+            <localClientSettings maxClockSkew="00:40:00"/>
+            <localServiceSettings maxClockSkew="00:40:00"/>
+            <secureConversationBootstrap>
+              <localClientSettings maxClockSkew="00:40:00"/>
+              <localServiceSettings maxClockSkew="00:40:00"/>
+            </secureConversationBootstrap>
+          </security>
+          <textMessageEncoding>
+            <readerQuotas maxDepth="2147483647" maxStringContentLength="2147483647" maxArrayLength="2147483647" maxBytesPerRead="2147483647" maxNameTableCharCount="2147483647"/>
+          </textMessageEncoding>
+          <httpTransport maxReceivedMessageSize="2147483000" maxBufferSize="2147483000"/>
+        </binding>
+      </customBinding>
+    </bindings>
+    <client>
+      <endpoint address="{ServiceBaseURL}/Cooperatives.svc" behaviorConfiguration="ClientConfig" binding="customBinding" bindingConfiguration="TokenBinding" contract="it.dedagroup.GVC.Repository.Common.Services.ICooperatives" name="CustomBinding_Cooperatives" />
+      <endpoint address="{ServiceBaseURL}/Users.svc" behaviorConfiguration="ClientConfig" binding="customBinding" bindingConfiguration="TokenBinding" contract="it.dedagroup.GVC.Repository.Common.Services.IUsers" name="CustomBinding_Users" />
+    </client>
+  </system.serviceModel>
+  <startup>
+    <supportedRuntime version="v2.0.50727"/>
+  </startup>
+</configuration>

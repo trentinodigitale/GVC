@@ -1,0 +1,17 @@
+﻿{ADAdminPassword}|ADAdminPassword
+{ADAdminUser}|CN=sts-test-adm,OU=STS,DC=it,DC=dcad,DC=infotn,DC=it
+{ADPathGroups}|LDAP://it.dcad.infotn.it:389/OU=Group,OU=.NET,OU=STS,DC=it,DC=dcad,DC=infotn,DC=it
+{ADPath}|LDAP://it.dcad.infotn.it:389/OU=User,OU=.NET,OU=STS,DC=it,DC=dcad,DC=infotn,DC=it
+{ADServer}|it.dcad.infotn.it
+{ConnectionString}|ConnectionString;
+{EnabledUsers}|it\G_GVC_PrimaryGroup
+{EnterpriseLibraryLog}|logpath.svclog
+{Environment}|Debug
+{PARIXProxyPassword}|PARIXProxyPassword
+{PARIXProxyUsername}|PARIXProxyUsername
+{ParixIntegrationURL}|...WSAnagraficaImprese.serviceagent
+{ServiceCertificateValue}|CN=netservices, OU=IT, O=Informatica Trentina, L=Trento, S=Italia, C=IT
+{ServiceKnownCertificateValue}|CN=SGA Security, OU=IT, O=Informatica Trentina, L=Trento, S=Italia, C=IT
+{TokenBindingIssuerAddressMex}|https://sts-test.infotn.it/STS.svc/mex
+{TokenBindingIssuerAddress}|https://sts-test.infotn.it/STS.svc
+{WCFMessageLog}|logpath.log

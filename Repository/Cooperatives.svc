@@ -1,0 +1,1 @@
+﻿<% @ServiceHost Service="it.dedagroup.GVC.Repository.etier.Services.Cooperatives"  %>

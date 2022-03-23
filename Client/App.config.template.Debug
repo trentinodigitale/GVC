@@ -1,0 +1,10 @@
+﻿{Environment}|Debug
+{DebugLoginEnabled}|false
+{DebugLoginPassword}|
+{EnterpriseLibraryLog}|C:\Logs\GVCClient.svclog
+{WCFMessageLog}|C:\Logs\Logs\GVCClientMessages.svclog
+{WCFTraceLog}|C:\Logs\GVCClientTrace.svclog
+{FullTrace}|false
+{TokenBindingIssuerAddress}|https://sts-test.infotn.it/STS.svc
+{TokenBindingIssuerAddressMex}|https://sts-test.infotn.it/STS.svc/mex
+{ServiceBaseURL}|http://localhost:6408

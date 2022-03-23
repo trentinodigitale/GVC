@@ -1,0 +1,143 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Components", "Components", "{B69DD696-0BE7-4D00-83A8-35D4E8ABB0E6}"
+	ProjectSection(SolutionItems) = preProject
+		Components\ADWSHelper.dll = Components\ADWSHelper.dll
+		Components\DevExpress.Data.v8.3.dll = Components\DevExpress.Data.v8.3.dll
+		Components\DevExpress.Utils.v8.3.dll = Components\DevExpress.Utils.v8.3.dll
+		Components\DevExpress.XtraBars.v8.3.dll = Components\DevExpress.XtraBars.v8.3.dll
+		Components\DevExpress.XtraEditors.v8.3.Design.dll = Components\DevExpress.XtraEditors.v8.3.Design.dll
+		Components\DevExpress.XtraEditors.v8.3.dll = Components\DevExpress.XtraEditors.v8.3.dll
+		Components\DevExpress.XtraGrid.v8.3.dll = Components\DevExpress.XtraGrid.v8.3.dll
+		Components\DevExpress.XtraLayout.v8.3.dll = Components\DevExpress.XtraLayout.v8.3.dll
+		Components\DevExpress.XtraNavBar.v8.3.dll = Components\DevExpress.XtraNavBar.v8.3.dll
+		Components\DevExpress.XtraPrinting.v8.3.dll = Components\DevExpress.XtraPrinting.v8.3.dll
+		Components\DevExpress.XtraRichEdit.v8.3.Design.dll = Components\DevExpress.XtraRichEdit.v8.3.Design.dll
+		Components\DevExpress.XtraRichEdit.v8.3.dll = Components\DevExpress.XtraRichEdit.v8.3.dll
+		Components\DevExpress.XtraScheduler.v8.3.Core.dll = Components\DevExpress.XtraScheduler.v8.3.Core.dll
+		Components\DevExpress.XtraScheduler.v8.3.Design.dll = Components\DevExpress.XtraScheduler.v8.3.Design.dll
+		Components\DevExpress.XtraScheduler.v8.3.dll = Components\DevExpress.XtraScheduler.v8.3.dll
+		Components\DevExpress.XtraTreeList.v8.3.Design.dll = Components\DevExpress.XtraTreeList.v8.3.Design.dll
+		Components\DevExpress.XtraTreeList.v8.3.dll = Components\DevExpress.XtraTreeList.v8.3.dll
+		Components\InfoTN.AuthorizationProvider.dll = Components\InfoTN.AuthorizationProvider.dll
+		Components\InfoTN.ServiceModel.dll = Components\InfoTN.ServiceModel.dll
+		Components\Microsoft.Practices.EnterpriseLibrary.Common.dll = Components\Microsoft.Practices.EnterpriseLibrary.Common.dll
+		Components\Microsoft.Practices.EnterpriseLibrary.Data.dll = Components\Microsoft.Practices.EnterpriseLibrary.Data.dll
+		Components\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll = Components\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll
+		Components\Microsoft.Practices.EnterpriseLibrary.Logging.dll = Components\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+		Components\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll = Components\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll
+		Components\Microsoft.Practices.ObjectBuilder.dll = Components\Microsoft.Practices.ObjectBuilder.dll
+		..\..\IT.InfoTN.AID\Baseline\AID\Components\Microsoft.Practices.ObjectBuilder.dll = ..\..\IT.InfoTN.AID\Baseline\AID\Components\Microsoft.Practices.ObjectBuilder.dll
+		Components\OeF.Web.dll = Components\OeF.Web.dll
+		Components\OeFLite.dll = Components\OeFLite.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "it", "it", "{8C383ACF-8EA8-4563-99A1-C06B11F726E5}"
+	ProjectSection(SolutionItems) = preProject
+		Components\it\DevExpress.Data.v8.3.resources.dll = Components\it\DevExpress.Data.v8.3.resources.dll
+		Components\it\DevExpress.Utils.v8.3.resources.dll = Components\it\DevExpress.Utils.v8.3.resources.dll
+		Components\it\DevExpress.XtraBars.v8.3.resources.dll = Components\it\DevExpress.XtraBars.v8.3.resources.dll
+		Components\it\DevExpress.XtraEditors.v8.3.resources.dll = Components\it\DevExpress.XtraEditors.v8.3.resources.dll
+		Components\it\DevExpress.XtraReports.v8.3.resources.dll = Components\it\DevExpress.XtraReports.v8.3.resources.dll
+		Components\it\OeFLite.resources.dll = Components\it\OeFLite.resources.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "rtier Generator", "rtier Generator", "{6DB05615-2CE9-428E-8B0D-F264D6202A8F}"
+	ProjectSection(SolutionItems) = preProject
+		Components\rtier Generator\Persistenza.exe = Components\rtier Generator\Persistenza.exe
+		Components\rtier Generator\Persistenza.exe.xml = Components\rtier Generator\Persistenza.exe.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Certificates", "Certificates", "{532227E6-5EAC-4FED-8BB2-17511CA077D8}"
+	ProjectSection(SolutionItems) = preProject
+		Components\Certificates\Readme.txt = Components\Certificates\Readme.txt
+		Components\Certificates\ws-p.parix.intra.infotn.it.p12 = Components\Certificates\ws-p.parix.intra.infotn.it.p12
+		Components\Certificates\ws-s.parix.intra.infotn.it.p12 = Components\Certificates\ws-s.parix.intra.infotn.it.p12
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{FDC8DFA7-A3D1-44F7-923A-A063C1B9FA50}"
+	ProjectSection(SolutionItems) = preProject
+		Tools\UpdateConfig.exe = Tools\UpdateConfig.exe
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.Common", "Repository\Common\Repository.Common.csproj", "{7D8449A8-CE00-4095-8CDE-3444A357C581}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.Forms", "Client\Forms\Client.Forms.csproj", "{07338111-E421-4F14-9D24-688BB5851BA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{EAAAACF4-6056-4EFD-8226-23332A8937D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.rtier", "Repository\rtier\Repository.rtier.csproj", "{E6E11CB8-4460-401F-90CF-495864CA8B20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{6F89FBBB-3ED7-47E1-82DE-F8BAF215D30B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository.etier", "Repository\Repository.etier\Repository.etier.csproj", "{D61AAE79-B0BD-484F-A16C-5FFF8C02B31A}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup.Client", "Setup.Client\Setup.Client.vdproj", "{8E450450-9BBF-4B83-BD22-80C2B65E805C}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup.Repository", "Setup.Repository\Setup.Repository.vdproj", "{C5015864-0BAD-4DE3-A2BE-ED43227ABE1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Production|Any CPU = Production|Any CPU
+		Stage|Any CPU = Stage|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D8449A8-CE00-4095-8CDE-3444A357C581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D8449A8-CE00-4095-8CDE-3444A357C581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D8449A8-CE00-4095-8CDE-3444A357C581}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{7D8449A8-CE00-4095-8CDE-3444A357C581}.Production|Any CPU.Build.0 = Production|Any CPU
+		{7D8449A8-CE00-4095-8CDE-3444A357C581}.Stage|Any CPU.ActiveCfg = Stage|Any CPU
+		{7D8449A8-CE00-4095-8CDE-3444A357C581}.Stage|Any CPU.Build.0 = Stage|Any CPU
+		{07338111-E421-4F14-9D24-688BB5851BA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07338111-E421-4F14-9D24-688BB5851BA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07338111-E421-4F14-9D24-688BB5851BA4}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{07338111-E421-4F14-9D24-688BB5851BA4}.Production|Any CPU.Build.0 = Production|Any CPU
+		{07338111-E421-4F14-9D24-688BB5851BA4}.Stage|Any CPU.ActiveCfg = Stage|Any CPU
+		{07338111-E421-4F14-9D24-688BB5851BA4}.Stage|Any CPU.Build.0 = Stage|Any CPU
+		{EAAAACF4-6056-4EFD-8226-23332A8937D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAAAACF4-6056-4EFD-8226-23332A8937D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAAAACF4-6056-4EFD-8226-23332A8937D7}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{EAAAACF4-6056-4EFD-8226-23332A8937D7}.Production|Any CPU.Build.0 = Production|Any CPU
+		{EAAAACF4-6056-4EFD-8226-23332A8937D7}.Stage|Any CPU.ActiveCfg = Stage|Any CPU
+		{EAAAACF4-6056-4EFD-8226-23332A8937D7}.Stage|Any CPU.Build.0 = Stage|Any CPU
+		{E6E11CB8-4460-401F-90CF-495864CA8B20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6E11CB8-4460-401F-90CF-495864CA8B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6E11CB8-4460-401F-90CF-495864CA8B20}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{E6E11CB8-4460-401F-90CF-495864CA8B20}.Production|Any CPU.Build.0 = Production|Any CPU
+		{E6E11CB8-4460-401F-90CF-495864CA8B20}.Stage|Any CPU.ActiveCfg = Stage|Any CPU
+		{E6E11CB8-4460-401F-90CF-495864CA8B20}.Stage|Any CPU.Build.0 = Stage|Any CPU
+		{6F89FBBB-3ED7-47E1-82DE-F8BAF215D30B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F89FBBB-3ED7-47E1-82DE-F8BAF215D30B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F89FBBB-3ED7-47E1-82DE-F8BAF215D30B}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{6F89FBBB-3ED7-47E1-82DE-F8BAF215D30B}.Production|Any CPU.Build.0 = Production|Any CPU
+		{6F89FBBB-3ED7-47E1-82DE-F8BAF215D30B}.Stage|Any CPU.ActiveCfg = Stage|Any CPU
+		{6F89FBBB-3ED7-47E1-82DE-F8BAF215D30B}.Stage|Any CPU.Build.0 = Stage|Any CPU
+		{D61AAE79-B0BD-484F-A16C-5FFF8C02B31A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D61AAE79-B0BD-484F-A16C-5FFF8C02B31A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D61AAE79-B0BD-484F-A16C-5FFF8C02B31A}.Production|Any CPU.ActiveCfg = Production|Any CPU
+		{D61AAE79-B0BD-484F-A16C-5FFF8C02B31A}.Production|Any CPU.Build.0 = Production|Any CPU
+		{D61AAE79-B0BD-484F-A16C-5FFF8C02B31A}.Stage|Any CPU.ActiveCfg = Stage|Any CPU
+		{D61AAE79-B0BD-484F-A16C-5FFF8C02B31A}.Stage|Any CPU.Build.0 = Stage|Any CPU
+		{8E450450-9BBF-4B83-BD22-80C2B65E805C}.Debug|Any CPU.ActiveCfg = Debug
+		{8E450450-9BBF-4B83-BD22-80C2B65E805C}.Production|Any CPU.ActiveCfg = Production
+		{8E450450-9BBF-4B83-BD22-80C2B65E805C}.Stage|Any CPU.ActiveCfg = Stage
+		{C5015864-0BAD-4DE3-A2BE-ED43227ABE1E}.Debug|Any CPU.ActiveCfg = Debug
+		{C5015864-0BAD-4DE3-A2BE-ED43227ABE1E}.Production|Any CPU.ActiveCfg = Production
+		{C5015864-0BAD-4DE3-A2BE-ED43227ABE1E}.Stage|Any CPU.ActiveCfg = Stage
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8C383ACF-8EA8-4563-99A1-C06B11F726E5} = {B69DD696-0BE7-4D00-83A8-35D4E8ABB0E6}
+		{6DB05615-2CE9-428E-8B0D-F264D6202A8F} = {B69DD696-0BE7-4D00-83A8-35D4E8ABB0E6}
+		{532227E6-5EAC-4FED-8BB2-17511CA077D8} = {B69DD696-0BE7-4D00-83A8-35D4E8ABB0E6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBA1D64B-E820-4E3C-B5E0-3CB37AB78F33}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1977 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{07338111-E421-4F14-9D24-688BB5851BA4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>it.dedagroup.GVC.Client.Forms</RootNamespace>
+    <AssemblyName>it.dedagroup.GVC.Client.Forms</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Stage|AnyCPU' ">
+    <OutputPath>bin\Stage\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Production|AnyCPU' ">
+    <OutputPath>bin\Production\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v8.3, Version=8.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\DevExpress.Data.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v8.3, Version=8.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\DevExpress.Utils.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v8.3, Version=8.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\DevExpress.XtraBars.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v8.3, Version=8.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\DevExpress.XtraEditors.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v8.3, Version=8.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\DevExpress.XtraGrid.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraLayout.v8.3, Version=8.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\DevExpress.XtraLayout.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v8.3, Version=8.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\DevExpress.XtraNavBar.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v8.3, Version=8.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\DevExpress.XtraPrinting.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v8.3, Version=8.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\DevExpress.XtraScheduler.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v8.3.Core, Version=8.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\DevExpress.XtraScheduler.v8.3.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v8.3, Version=8.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\DevExpress.XtraTreeList.v8.3.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v8.3.Design, Version=8.3.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\DevExpress.XtraTreeList.v8.3.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Microsoft.Practices.EnterpriseLibrary.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cryptography, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="OeFLite, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\OeFLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Aggiornamenti\ActivityComparer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Aggiornamenti\ActivityComparer.Designer.cs">
+      <DependentUpon>ActivityComparer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aggiornamenti\AddressComparer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Aggiornamenti\AddressComparer.Designer.cs">
+      <DependentUpon>AddressComparer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aggiornamenti\AddressInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Aggiornamenti\AddressInfo.Designer.cs">
+      <DependentUpon>AddressInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aggiornamenti\AggiornamentiMain.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Aggiornamenti\AggiornamentiMain.Designer.cs">
+      <DependentUpon>AggiornamentiMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aggiornamenti\ComparerPattern.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Aggiornamenti\ComparerPattern.Designer.cs">
+      <DependentUpon>ComparerPattern.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aggiornamenti\DataCostituzioneComarer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Aggiornamenti\DataCostituzioneComarer.Designer.cs">
+      <DependentUpon>DataCostituzioneComarer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aggiornamenti\DurataSocietaComparer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Aggiornamenti\DurataSocietaComparer.Designer.cs">
+      <DependentUpon>DurataSocietaComparer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aggiornamenti\InfoDlg.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Aggiornamenti\InfoDlg.Designer.cs">
+      <DependentUpon>InfoDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Aggiornamenti\StringComparer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Aggiornamenti\StringComparer.Designer.cs">
+      <DependentUpon>StringComparer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Anagrafica\RicercaSoggetto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Anagrafica\RicercaSoggetto.Designer.cs">
+      <DependentUpon>RicercaSoggetto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\IUserCommon.cs" />
+    <Compile Include="Common\UserControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\UserControlBase.Designer.cs">
+      <DependentUpon>UserControlBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UserControlDialog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\UserControlDialog.Designer.cs">
+      <DependentUpon>UserControlDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UserControlDocking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\UserControlDocking.Designer.cs">
+      <DependentUpon>UserControlDocking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UserControlHelp.cs" />
+    <Compile Include="Common\UserControlSplitContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Common\UserControlSplitContainer.Designer.cs">
+      <DependentUpon>UserControlSplitContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ButtonEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\CheckEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ComboBoxEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\BindingSource.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LabelControlParix.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SimpleButtonNewProcess.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ExpandiblePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\ExpandiblePanel.Designer.cs">
+      <DependentUpon>ExpandiblePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LookUpEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\DateEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\GroupControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\LabelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\PanelControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\RadioGroup.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\SimpleButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TextEdit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\XtraTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\XtraTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\BaseCariche\BaseCaricheDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\BaseCariche\BaseCaricheDetail.Designer.cs">
+      <DependentUpon>BaseCaricheDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneBaseSoc\ComunicazioneBaseSocDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneBaseSoc\ComunicazioneBaseSocDetail.Designer.cs">
+      <DependentUpon>ComunicazioneBaseSocDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneBaseSoc\ComunicazioneBaseSocEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneBaseSoc\ComunicazioneBaseSocEdit.Designer.cs">
+      <DependentUpon>ComunicazioneBaseSocEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneCaricaSoc\CaricaSocialeDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneCaricaSoc\CaricaSocialeDetail.Designer.cs">
+      <DependentUpon>CaricaSocialeDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneCaricaSoc\CaricaSocialeEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneCaricaSoc\CaricaSocialeEdit.Designer.cs">
+      <DependentUpon>CaricaSocialeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneCaricaSoc\ComunicazioneDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneCaricaSoc\ComunicazioneDetail.Designer.cs">
+      <DependentUpon>ComunicazioneDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneCaricaSoc\ComunicazioneEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneCaricaSoc\ComunicazioneEdit.Designer.cs">
+      <DependentUpon>ComunicazioneEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Data\Indirizzo\IndirizzoDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Data\Indirizzo\IndirizzoDetail.Designer.cs">
+      <DependentUpon>IndirizzoDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Data\Indirizzo\IndirizzoEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Data\Indirizzo\IndirizzoEdit.Designer.cs">
+      <DependentUpon>IndirizzoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Adesione\AdesioneDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Adesione\AdesioneDetail.Designer.cs">
+      <DependentUpon>AdesioneDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Adesione\AdesioneEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Adesione\AdesioneEdit.Designer.cs">
+      <DependentUpon>AdesioneEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Data\RicercaAttivita.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Data\RicercaAttivita.Designer.cs">
+      <DependentUpon>RicercaAttivita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\DatiStorici\DatiStoriciAssemblea.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\DatiStorici\DatiStoriciAssemblea.Designer.cs">
+      <DependentUpon>DatiStoriciAssemblea.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\DatiStorici\DatiStoriciRegistro.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\DatiStorici\DatiStoriciRegistro.Designer.cs">
+      <DependentUpon>DatiStoriciRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\DocumentazioneFileSystem\DocumentazioneFileSystemDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\DocumentazioneFileSystem\DocumentazioneFileSystemDetail.Designer.cs">
+      <DependentUpon>DocumentazioneFileSystemDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\LegaliRappresentanti\LegaliRappresentanti.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\LegaliRappresentanti\LegaliRappresentanti.Designer.cs">
+      <DependentUpon>LegaliRappresentanti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Registro\IscrizioneComeCambio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Registro\IscrizioneComeCambio.Designer.cs">
+      <DependentUpon>IscrizioneComeCambio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Registro\Iscrizione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Registro\Iscrizione.Designer.cs">
+      <DependentUpon>Iscrizione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Revisione\IncaricoLiquidazioneDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Revisione\IncaricoLiquidazioneDetail.Designer.cs">
+      <DependentUpon>IncaricoLiquidazioneDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\Commissari\CommissarioEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\Commissari\CommissarioEdit.Designer.cs">
+      <DependentUpon>CommissarioEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\Commissari\LiquidazCompensoCommissarioEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\Commissari\LiquidazCompensoCommissarioEdit.Designer.cs">
+      <DependentUpon>LiquidazCompensoCommissarioEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\Commissari\CommissarioDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\Commissari\CommissarioDetail.Designer.cs">
+      <DependentUpon>CommissarioDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\Commissari\LiquidazCompensoCommissarioDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\Commissari\LiquidazCompensoCommissarioDetail.Designer.cs">
+      <DependentUpon>LiquidazCompensoCommissarioDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Revisione\LiquidazioneRevisoreDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Revisione\LiquidazioneRevisoreDetail.Designer.cs">
+      <DependentUpon>LiquidazioneRevisoreDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Documentazione\DocumentazioneDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Documentazione\DocumentazioneDetail.Designer.cs">
+      <DependentUpon>DocumentazioneDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Documentazione\DocumentazioneEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\AcquistoCreditFiscDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\AcquistoCreditFiscDetail.Designer.cs">
+      <DependentUpon>AcquistoCreditFiscDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\RelazioneSemestraleEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\RelazioneSemestraleEdit.Designer.cs">
+      <DependentUpon>RelazioneSemestraleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\ProceduraFallimentare\ProceduraFallimentareDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\ProceduraFallimentare\ProceduraFallimentareDetail.Designer.cs">
+      <DependentUpon>ProceduraFallimentareDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\AutorizzazioneDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\AutorizzazioneDetail.Designer.cs">
+      <DependentUpon>AutorizzazioneDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\AutorizzazioneEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\AutorizzazioneEdit.Designer.cs">
+      <DependentUpon>AutorizzazioneEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\LiquidazioneCoattaDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\LiquidazioneCoattaDetail.Designer.cs">
+      <DependentUpon>LiquidazioneCoattaDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\LiquidazioneCoattaEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\LiquidazioneCoattaEdit.Designer.cs">
+      <DependentUpon>LiquidazioneCoattaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\SpeseProceduraDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\SpeseProceduraDetail.Designer.cs">
+      <DependentUpon>SpeseProceduraDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\SpeseProceduraEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\SpeseProceduraEdit.Designer.cs">
+      <DependentUpon>SpeseProceduraEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\ProceduraFallimentare\ProceduraFallimentareEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\ProceduraFallimentare\ProceduraFallimentareEdit.Designer.cs">
+      <DependentUpon>ProceduraFallimentareEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\SanzioniAmministrative\SanzioneAmministrativaDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\SanzioniAmministrative\SanzioneAmministrativaDetail.Designer.cs">
+      <DependentUpon>SanzioneAmministrativaDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\SanzioniAmministrative\SanzioneAmministrativaEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\SanzioniAmministrative\SanzioneAmministrativaEdit.Designer.cs">
+      <DependentUpon>SanzioneAmministrativaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Procedimento\ProcedimentoDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Procedimento\ProcedimentoDetail.Designer.cs">
+      <DependentUpon>ProcedimentoDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Procedimento\ProcedimentoEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Procedimento\ProcedimentoEdit.Designer.cs">
+      <DependentUpon>ProcedimentoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Revisione\RevisioneEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Revisione\RevisioneEdit.Designer.cs">
+      <DependentUpon>RevisioneEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Revisione\LiquidazioneRevisoreEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Revisione\LiquidazioneRevisoreEdit.Designer.cs">
+      <DependentUpon>LiquidazioneRevisoreEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\RelazioneSemestraleDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\RelazioneSemestraleDetail.Designer.cs">
+      <DependentUpon>RelazioneSemestraleDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\AcquistoCreditiFiscEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\AcquistoCreditiFiscEdit.Designer.cs">
+      <DependentUpon>AcquistoCreditiFiscEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\ProceduraCoatta\ProrogaEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\ProceduraCoatta\ProrogaEdit.Designer.cs">
+      <DependentUpon>ProrogaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\ProceduraCoatta\ProceduraCoattaDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\ProceduraCoatta\ProceduraCoattaDetail.Designer.cs">
+      <DependentUpon>ProceduraCoattaDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\ProceduraCoatta\ProceduraCoattaEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Sanzioni\ProceduraCoatta\ProceduraCoattaEdit.Designer.cs">
+      <DependentUpon>ProceduraCoattaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\AssembleaDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\AssembleaDetail.Designer.cs">
+      <DependentUpon>AssembleaDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\AssembleaEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\AssembleaEdit.Designer.cs">
+      <DependentUpon>AssembleaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificaStatutariaDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificaStatutariaDetail.Designer.cs">
+      <DependentUpon>ModificaStatutariaDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\AttoIntegrativoEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\AttoIntegrativoEdit.Designer.cs">
+      <DependentUpon>AttoIntegrativoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Annotazione\ScadenziarioDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Annotazione\ScadenziarioDetail.Designer.cs">
+      <DependentUpon>ScadenziarioDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Annotazione\ScadenziarioEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Annotazione\ScadenziarioEdit.Designer.cs">
+      <DependentUpon>ScadenziarioEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Revisione\RevisioneDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Revisione\RevisioneDetail.Designer.cs">
+      <DependentUpon>RevisioneDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Revisione\IncaricoRevisioneDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Revisione\IncaricoRevisioneDetail.Designer.cs">
+      <DependentUpon>IncaricoRevisioneDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Revisione\IncaricoRevisioneEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Revisione\IncaricoRevisioneEdit.Designer.cs">
+      <DependentUpon>IncaricoRevisioneEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\CooperativeEdit1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\CooperativeEdit1.Designer.cs">
+      <DependentUpon>CooperativeEdit1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Bilancio\BilancioDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Bilancio\BilancioDetail.Designer.cs">
+      <DependentUpon>BilancioDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Bilancio\BilancioEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Bilancio\BilancioEdit.Designer.cs">
+      <DependentUpon>BilancioEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\CoopData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\CoopData.Designer.cs">
+      <DependentUpon>CoopData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Data\Activities.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Data\Activities.Designer.cs">
+      <DependentUpon>Activities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Data\Data.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Data\Data.Designer.cs">
+      <DependentUpon>Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Data\DataFromRI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Data\DataFromRI.Designer.cs">
+      <DependentUpon>DataFromRI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Data\DataGenerics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Data\DataGenerics.Designer.cs">
+      <DependentUpon>DataGenerics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Header\Header.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Header\Header.Designer.cs">
+      <DependentUpon>Header.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Registro\Cancellazione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Registro\Cancellazione.Designer.cs">
+      <DependentUpon>Cancellazione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Registro\Register.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Registro\Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Registro\PosizioneAttuale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Registro\PosizioneAttuale.Designer.cs">
+      <DependentUpon>PosizioneAttuale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Registro\CambioPosizione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Registro\CambioPosizione.Designer.cs">
+      <DependentUpon>CambioPosizione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificaStatutariaEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificaStatutariaEdit.Designer.cs">
+      <DependentUpon>ModificaStatutariaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\AttoFusioneScissione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\AttoFusioneScissione.Designer.cs">
+      <DependentUpon>AttoFusioneScissione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\CollegamentoEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\CollegamentoEdit.Designer.cs">
+      <DependentUpon>CollegamentoEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\Fusione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\Fusione.Designer.cs">
+      <DependentUpon>Fusione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\FusioneIncorporante.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\FusioneIncorporante.Designer.cs">
+      <DependentUpon>FusioneIncorporante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\ModificaGenerica.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\ModificaGenerica.Designer.cs">
+      <DependentUpon>ModificaGenerica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\NuovoScioglimentoVolontario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\NuovoScioglimentoVolontario.Designer.cs">
+      <DependentUpon>NuovoScioglimentoVolontario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\NuovaScadenzaEsercizi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\NuovaScadenzaEsercizi.Designer.cs">
+      <DependentUpon>NuovaScadenzaEsercizi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\NuovaDurata.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\NuovaDurata.Designer.cs">
+      <DependentUpon>NuovaDurata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\NuovaFormaGiuridica.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\NuovaFormaGiuridica.Designer.cs">
+      <DependentUpon>NuovaFormaGiuridica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\NuovaDenominazione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\NuovaDenominazione.Designer.cs">
+      <DependentUpon>NuovaDenominazione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\Scissione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\Scissione.Designer.cs">
+      <DependentUpon>Scissione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\TrasferimentoFuoriProv.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\TrasferimentoFuoriProv.Designer.cs">
+      <DependentUpon>TrasferimentoFuoriProv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\AttoCostitutivo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\AttoCostitutivo.Designer.cs">
+      <DependentUpon>AttoCostitutivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\ModificheStatuto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cooperative\UserControlCoop\Statuto\ModificheStatuto.Designer.cs">
+      <DependentUpon>ModificheStatuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\GVCSystemEngine.cs" />
+    <Compile Include="Forms\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangePassword.designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CooperativeChoice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\CooperativeChoice.Designer.cs">
+      <DependentUpon>CooperativeChoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Anagrafica\AnagraficaEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Anagrafica\AnagraficaEdit.Designer.cs">
+      <DependentUpon>AnagraficaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClientVersionMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientVersionMessage.designer.cs">
+      <DependentUpon>ClientVersionMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UnlockEntitiesManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UnlockEntitiesManager.Designer.cs">
+      <DependentUpon>UnlockEntitiesManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DebugLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DebugLogin.designer.cs">
+      <DependentUpon>DebugLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Annotazioni\AnnotazioniSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\Annotazioni\AnnotazioniSearch.Designer.cs">
+      <DependentUpon>AnnotazioniSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Bilanci\BilanciSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\Bilanci\BilanciSearch.Designer.cs">
+      <DependentUpon>BilanciSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Cancellazioni\CancellazioniSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\Cancellazioni\CancellazioniSearch.Designer.cs">
+      <DependentUpon>CancellazioniSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Common\CooperativaDati.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\Common\CooperativaDati.Designer.cs">
+      <DependentUpon>CooperativaDati.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\ConfrontoParix\ConfrontoParix.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\ConfrontoParix\ConfrontoParix.Designer.cs">
+      <DependentUpon>ConfrontoParix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\CoopAdvancedSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\CoopAdvancedSearch.Designer.cs">
+      <DependentUpon>CoopAdvancedSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Documentazione\DocumentazioniSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\Documentazione\DocumentazioniSearch.Designer.cs">
+      <DependentUpon>DocumentazioniSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Fallimenti\FallimentiSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\Fallimenti\FallimentiSearch.Designer.cs">
+      <DependentUpon>FallimentiSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\GruppiParitetici\CooperativeGruppoParitetico.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\GruppiParitetici\CooperativeGruppoParitetico.Designer.cs">
+      <DependentUpon>CooperativeGruppoParitetico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\GruppiParitetici\GruppiParitetici.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\GruppiParitetici\GruppiParitetici.Designer.cs">
+      <DependentUpon>GruppiParitetici.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\GruppiParitetici\GruppiPariteticiSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\GruppiParitetici\GruppiPariteticiSearch.Designer.cs">
+      <DependentUpon>GruppiPariteticiSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\GruppiParitetici\GruppoPariteticoHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\GruppiParitetici\GruppoPariteticoHeader.Designer.cs">
+      <DependentUpon>GruppoPariteticoHeader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\ModificheParix\ModificheParixSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\ModificheParix\ModificheParixSearch.Designer.cs">
+      <DependentUpon>ModificheParixSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\ModificheStatutarie\ModificheStatSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\ModificheStatutarie\ModificheStatSearch.Designer.cs">
+      <DependentUpon>ModificheStatSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Parix\SearchParix.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\Parix\SearchParix.Designer.cs">
+      <DependentUpon>SearchParix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\CoopTemplateSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\CoopTemplateSearch.Designer.cs">
+      <DependentUpon>CoopTemplateSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Procedimenti\ProcedimentiSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\Procedimenti\ProcedimentiSearch.Designer.cs">
+      <DependentUpon>ProcedimentiSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Revisioni\RevisioniDaEffettuareSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\Revisioni\RevisioniDaEffettuareSearch.Designer.cs">
+      <DependentUpon>RevisioniDaEffettuareSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Revisioni\RevisioniEffettuateSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\Revisioni\RevisioniEffettuateSearch.Designer.cs">
+      <DependentUpon>RevisioniEffettuateSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Sanzioni\LiquidazioneCoatta\LiquidazioneCoattaSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\Sanzioni\LiquidazioneCoatta\LiquidazioneCoattaSearch.Designer.cs">
+      <DependentUpon>LiquidazioneCoattaSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Sanzioni\LiquidazioneCoatta\RelazioneSemestraleSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\Sanzioni\LiquidazioneCoatta\RelazioneSemestraleSearch.Designer.cs">
+      <DependentUpon>RelazioneSemestraleSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Sanzioni\ProceduraCoatta\ProceduraCoattaSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\Sanzioni\ProceduraCoatta\ProceduraCoattaSearch.Designer.cs">
+      <DependentUpon>ProceduraCoattaSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\Sanzioni\SanzioniAmministrative\SanzioniSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\Sanzioni\SanzioniAmministrative\SanzioniSearch.Designer.cs">
+      <DependentUpon>SanzioniSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\SubjectSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\SubjectSearch.Designer.cs">
+      <DependentUpon>SubjectSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaticClassTemp1.cs" />
+    <Compile Include="MDIForm\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDIForm\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Anagrafica\PersonaGiuridicaEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Anagrafica\PersonaGiuridicaEdit.Designer.cs">
+      <DependentUpon>PersonaGiuridicaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Anagrafica\PersonaFisicaEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Anagrafica\PersonaFisicaEdit.Designer.cs">
+      <DependentUpon>PersonaFisicaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search\CooperativeSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Search\CooperativeSearch.Designer.cs">
+      <DependentUpon>CooperativeSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaticClassTemp.cs" />
+    <Compile Include="Statistics\CooperativeStatistics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Statistics\CooperativeStatistics.Designer.cs">
+      <DependentUpon>CooperativeStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\CadenzaRevisione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\CadenzaRevisione.Designer.cs">
+      <DependentUpon>CadenzaRevisione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\CadenzaRevisioneEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\CadenzaRevisioneEdit.Designer.cs">
+      <DependentUpon>CadenzaRevisioneEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\Cartelle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\Cartelle.Designer.cs">
+      <DependentUpon>Cartelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\CartelleEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\CartelleEdit.Designer.cs">
+      <DependentUpon>CartelleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\DizionarioEditWithDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\DizionarioEditWithDetail.Designer.cs">
+      <DependentUpon>DizionarioEditWithDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\EsitoRevisione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\EsitoRevisione.Designer.cs">
+      <DependentUpon>EsitoRevisione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\DatiEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\DatiEdit.Designer.cs">
+      <DependentUpon>DatiEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\Dati.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\Dati.Designer.cs">
+      <DependentUpon>Dati.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\GiudiciRicorsi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\GiudiciRicorsi.Designer.cs">
+      <DependentUpon>GiudiciRicorsi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\IDizionarioEdit.cs" />
+    <Compile Include="Vocabolari\LeggiTrasgressione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\LeggiTrasgressione.Designer.cs">
+      <DependentUpon>LeggiTrasgressione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\LeggiTrasgressioneEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\LeggiTrasgressioneEdit.Designer.cs">
+      <DependentUpon>LeggiTrasgressioneEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\LimitiCosto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\LimitiCosto.Designer.cs">
+      <DependentUpon>LimitiCosto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\NumeroSociEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\NumeroSociEdit.Designer.cs">
+      <DependentUpon>NumeroSociEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\NumeroSociDetail.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\NumeroSociDetail.Designer.cs">
+      <DependentUpon>NumeroSociDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\FormaGiuridica.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\FormaGiuridica.Designer.cs">
+      <DependentUpon>FormaGiuridica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\TipiConclusione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\TipiConclusione.Designer.cs">
+      <DependentUpon>TipiConclusione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\TipiSospensione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\TipiSospensione.Designer.cs">
+      <DependentUpon>TipiSospensione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\TipiIniziativa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\TipiIniziativa.Designer.cs">
+      <DependentUpon>TipiIniziativa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\TipiProcedimento.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\TipiProcedimento.Designer.cs">
+      <DependentUpon>TipiProcedimento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\TipiSoggetto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\TipiSoggetto.Designer.cs">
+      <DependentUpon>TipiSoggetto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\ProceduraCoatta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\ProceduraCoatta.Designer.cs">
+      <DependentUpon>ProceduraCoatta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\Sottocategoria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\Sottocategoria.Designer.cs">
+      <DependentUpon>Sottocategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\TipiAnnotazione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\TipiAnnotazione.Designer.cs">
+      <DependentUpon>TipiAnnotazione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\TipiDocumentazione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\TipiDocumentazione.Designer.cs">
+      <DependentUpon>TipiDocumentazione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\TipiAutorizzazione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\TipiAutorizzazione.Designer.cs">
+      <DependentUpon>TipiAutorizzazione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\TipiAttiIntegrativo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\TipiAttiIntegrativo.Designer.cs">
+      <DependentUpon>TipiAttiIntegrativo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\TipiCategoria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\TipiCategoria.Designer.cs">
+      <DependentUpon>TipiCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\TipiModificaStatutaria.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\TipiModificaStatutaria.Designer.cs">
+      <DependentUpon>TipiModificaStatutaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\TipiIndirizzo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\TipiIndirizzo.Designer.cs">
+      <DependentUpon>TipiIndirizzo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\DizionarioEdit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\DizionarioEdit.Designer.cs">
+      <DependentUpon>DizionarioEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\TipiTrasgressione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\TipiTrasgressione.Designer.cs">
+      <DependentUpon>TipiTrasgressione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\TipoRevisione.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\TipoRevisione.Designer.cs">
+      <DependentUpon>TipoRevisione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vocabolari\VocabolariHelp.cs" />
+    <Compile Include="Vocabolari\VocabolariManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vocabolari\VocabolariManager.Designer.cs">
+      <DependentUpon>VocabolariManager.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Aggiornamenti\ActivityComparer.resx">
+      <DependentUpon>ActivityComparer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aggiornamenti\AddressComparer.resx">
+      <DependentUpon>AddressComparer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aggiornamenti\AddressInfo.resx">
+      <DependentUpon>AddressInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aggiornamenti\AggiornamentiMain.resx">
+      <DependentUpon>AggiornamentiMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aggiornamenti\ComparerPattern.resx">
+      <DependentUpon>ComparerPattern.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aggiornamenti\DataCostituzioneComarer.resx">
+      <DependentUpon>DataCostituzioneComarer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aggiornamenti\DurataSocietaComparer.resx">
+      <DependentUpon>DurataSocietaComparer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aggiornamenti\InfoDlg.resx">
+      <DependentUpon>InfoDlg.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Aggiornamenti\StringComparer.resx">
+      <DependentUpon>StringComparer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anagrafica\RicercaSoggetto.resx">
+      <DependentUpon>RicercaSoggetto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\UserControlBase.resx">
+      <DependentUpon>UserControlBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\UserControlDialog.resx">
+      <DependentUpon>UserControlDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\UserControlDocking.resx">
+      <DependentUpon>UserControlDocking.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\UserControlSplitContainer.resx">
+      <DependentUpon>UserControlSplitContainer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ExpandiblePanel.resx">
+      <DependentUpon>ExpandiblePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LabelControlParix.resx">
+      <DependentUpon>LabelControlParix.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LookUpEdit.resx">
+      <DependentUpon>LookUpEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\SimpleButtonNewProcess.resx">
+      <DependentUpon>SimpleButtonNewProcess.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\TextEdit.resx">
+      <DependentUpon>TextEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\BaseCariche\BaseCaricheDetail.resx">
+      <DependentUpon>BaseCaricheDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneBaseSoc\ComunicazioneBaseSocDetail.resx">
+      <DependentUpon>ComunicazioneBaseSocDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneBaseSoc\ComunicazioneBaseSocEdit.resx">
+      <DependentUpon>ComunicazioneBaseSocEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneCaricaSoc\CaricaSocialeDetail.resx">
+      <DependentUpon>CaricaSocialeDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneCaricaSoc\CaricaSocialeEdit.resx">
+      <DependentUpon>CaricaSocialeEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneCaricaSoc\ComunicazioneDetail.resx">
+      <DependentUpon>ComunicazioneDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\BaseCariche\ComunicazioneCaricaSoc\ComunicazioneEdit.resx">
+      <DependentUpon>ComunicazioneEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Data\Indirizzo\IndirizzoDetail.resx">
+      <DependentUpon>IndirizzoDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Data\Indirizzo\IndirizzoEdit.resx">
+      <DependentUpon>IndirizzoEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Adesione\AdesioneDetail.resx">
+      <DependentUpon>AdesioneDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Adesione\AdesioneEdit.resx">
+      <DependentUpon>AdesioneEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Data\RicercaAttivita.resx">
+      <DependentUpon>RicercaAttivita.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\DatiStorici\DatiStoriciAssemblea.resx">
+      <DependentUpon>DatiStoriciAssemblea.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\DatiStorici\DatiStoriciRegistro.resx">
+      <DependentUpon>DatiStoriciRegistro.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\DocumentazioneFileSystem\DocumentazioneFileSystemDetail.resx">
+      <DependentUpon>DocumentazioneFileSystemDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\LegaliRappresentanti\LegaliRappresentanti.resx">
+      <DependentUpon>LegaliRappresentanti.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Registro\IscrizioneComeCambio.resx">
+      <DependentUpon>IscrizioneComeCambio.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Registro\Iscrizione.resx">
+      <DependentUpon>Iscrizione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Revisione\IncaricoLiquidazioneDetail.resx">
+      <DependentUpon>IncaricoLiquidazioneDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\Commissari\CommissarioEdit.resx">
+      <DependentUpon>CommissarioEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\Commissari\LiquidazCompensoCommissarioEdit.resx">
+      <DependentUpon>LiquidazCompensoCommissarioEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\Commissari\CommissarioDetail.resx">
+      <DependentUpon>CommissarioDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\Commissari\LiquidazCompensoCommissarioDetail.resx">
+      <DependentUpon>LiquidazCompensoCommissarioDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Revisione\LiquidazioneRevisoreDetail.resx">
+      <DependentUpon>LiquidazioneRevisoreDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Documentazione\DocumentazioneDetail.resx">
+      <DependentUpon>DocumentazioneDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Documentazione\DocumentazioneEdit.resx">
+      <DependentUpon>DocumentazioneEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\AcquistoCreditFiscDetail.resx">
+      <DependentUpon>AcquistoCreditFiscDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\RelazioneSemestraleEdit.resx">
+      <DependentUpon>RelazioneSemestraleEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\ProceduraFallimentare\ProceduraFallimentareDetail.resx">
+      <DependentUpon>ProceduraFallimentareDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\AutorizzazioneDetail.resx">
+      <DependentUpon>AutorizzazioneDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\AutorizzazioneEdit.resx">
+      <DependentUpon>AutorizzazioneEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\LiquidazioneCoattaDetail.resx">
+      <DependentUpon>LiquidazioneCoattaDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\LiquidazioneCoattaEdit.resx">
+      <DependentUpon>LiquidazioneCoattaEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\SpeseProceduraDetail.resx">
+      <DependentUpon>SpeseProceduraDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\SpeseProceduraEdit.resx">
+      <DependentUpon>SpeseProceduraEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\RelazioneSemestraleDetail.resx">
+      <DependentUpon>RelazioneSemestraleDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\LiquidazioneCoatta\AcquistoCreditiFiscEdit.resx">
+      <DependentUpon>AcquistoCreditiFiscEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\ProceduraCoatta\ProrogaEdit.resx">
+      <DependentUpon>ProrogaEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\ProceduraCoatta\ProceduraCoattaDetail.resx">
+      <DependentUpon>ProceduraCoattaDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\ProceduraCoatta\ProceduraCoattaEdit.resx">
+      <DependentUpon>ProceduraCoattaEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\ProceduraFallimentare\ProceduraFallimentareEdit.resx">
+      <DependentUpon>ProceduraFallimentareEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\AssembleaDetail.resx">
+      <DependentUpon>AssembleaDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\AssembleaEdit.resx">
+      <DependentUpon>AssembleaEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificaStatutariaDetail.resx">
+      <DependentUpon>ModificaStatutariaDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\AttoIntegrativoEdit.resx">
+      <DependentUpon>AttoIntegrativoEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\SanzioniAmministrative\SanzioneAmministrativaDetail.resx">
+      <DependentUpon>SanzioneAmministrativaDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Sanzioni\SanzioniAmministrative\SanzioneAmministrativaEdit.resx">
+      <DependentUpon>SanzioneAmministrativaEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Procedimento\ProcedimentoDetail.resx">
+      <DependentUpon>ProcedimentoDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Procedimento\ProcedimentoEdit.resx">
+      <DependentUpon>ProcedimentoEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Annotazione\ScadenziarioDetail.resx">
+      <DependentUpon>ScadenziarioDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Annotazione\ScadenziarioEdit.resx">
+      <DependentUpon>ScadenziarioEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Revisione\RevisioneDetail.resx">
+      <DependentUpon>RevisioneDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Revisione\RevisioneEdit.resx">
+      <DependentUpon>RevisioneEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Revisione\IncaricoRevisioneDetail.resx">
+      <DependentUpon>IncaricoRevisioneDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Revisione\IncaricoRevisioneEdit.resx">
+      <DependentUpon>IncaricoRevisioneEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Revisione\LiquidazioneRevisoreEdit.resx">
+      <DependentUpon>LiquidazioneRevisoreEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\CooperativeEdit1.resx">
+      <DependentUpon>CooperativeEdit1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Bilancio\BilancioDetail.resx">
+      <DependentUpon>BilancioDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Bilancio\BilancioEdit.resx">
+      <DependentUpon>BilancioEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\CoopData.resx">
+      <DependentUpon>CoopData.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Data\Activities.resx">
+      <DependentUpon>Activities.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Data\Data.resx">
+      <DependentUpon>Data.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Data\DataFromRI.resx">
+      <DependentUpon>DataFromRI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Data\DataGenerics.resx">
+      <DependentUpon>DataGenerics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Header\Header.resx">
+      <DependentUpon>Header.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Registro\Cancellazione.resx">
+      <DependentUpon>Cancellazione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Registro\Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Registro\PosizioneAttuale.resx">
+      <DependentUpon>PosizioneAttuale.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Registro\CambioPosizione.resx">
+      <DependentUpon>CambioPosizione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificaStatutariaEdit.resx">
+      <DependentUpon>ModificaStatutariaEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\AttoFusioneScissione.resx">
+      <DependentUpon>AttoFusioneScissione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\CollegamentoEdit.resx">
+      <DependentUpon>CollegamentoEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\Fusione.resx">
+      <DependentUpon>Fusione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\FusioneIncorporante.resx">
+      <DependentUpon>FusioneIncorporante.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\ModificaGenerica.resx">
+      <DependentUpon>ModificaGenerica.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\NuovoScioglimentoVolontario.resx">
+      <DependentUpon>NuovoScioglimentoVolontario.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\NuovaScadenzaEsercizi.resx">
+      <DependentUpon>NuovaScadenzaEsercizi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\NuovaDurata.resx">
+      <DependentUpon>NuovaDurata.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\NuovaFormaGiuridica.resx">
+      <DependentUpon>NuovaFormaGiuridica.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\NuovaDenominazione.resx">
+      <DependentUpon>NuovaDenominazione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\Scissione.resx">
+      <DependentUpon>Scissione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\Assemblea\ModificheStatutarie\TrasferimentoFuoriProv.resx">
+      <DependentUpon>TrasferimentoFuoriProv.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\AttoCostitutivo.resx">
+      <DependentUpon>AttoCostitutivo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cooperative\UserControlCoop\Statuto\ModificheStatuto.resx">
+      <DependentUpon>ModificheStatuto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CooperativeChoice.resx">
+      <DependentUpon>CooperativeChoice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientVersionMessage.resx">
+      <DependentUpon>ClientVersionMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UnlockEntitiesManager.resx">
+      <DependentUpon>UnlockEntitiesManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DebugLogin.resx">
+      <DependentUpon>DebugLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\Main.it.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDIForm\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Anagrafica\PersonaGiuridicaEdit.resx">
+      <DependentUpon>PersonaGiuridicaEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anagrafica\PersonaFisicaEdit.resx">
+      <DependentUpon>PersonaFisicaEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Anagrafica\AnagraficaEdit.resx">
+      <DependentUpon>AnagraficaEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\Annotazioni\AnnotazioniSearch.resx">
+      <DependentUpon>AnnotazioniSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\Bilanci\BilanciSearch.resx">
+      <DependentUpon>BilanciSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\Cancellazioni\CancellazioniSearch.resx">
+      <DependentUpon>CancellazioniSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\Common\CooperativaDati.resx">
+      <DependentUpon>CooperativaDati.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\ConfrontoParix\ConfrontoParix.resx">
+      <DependentUpon>ConfrontoParix.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\CoopAdvancedSearch.resx">
+      <DependentUpon>CoopAdvancedSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\Documentazione\DocumentazioniSearch.resx">
+      <DependentUpon>DocumentazioniSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\Fallimenti\FallimentiSearch.resx">
+      <DependentUpon>FallimentiSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\GruppiParitetici\CooperativeGruppoParitetico.resx">
+      <DependentUpon>CooperativeGruppoParitetico.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\GruppiParitetici\GruppiParitetici.resx">
+      <DependentUpon>GruppiParitetici.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\GruppiParitetici\GruppiPariteticiSearch.resx">
+      <DependentUpon>GruppiPariteticiSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\GruppiParitetici\GruppoPariteticoHeader.resx">
+      <DependentUpon>GruppoPariteticoHeader.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\ModificheParix\ModificheParixSearch.resx">
+      <DependentUpon>ModificheParixSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\ModificheStatutarie\ModificheStatSearch.resx">
+      <DependentUpon>ModificheStatSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\Parix\SearchParix.resx">
+      <DependentUpon>SearchParix.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\CooperativeSearch.resx">
+      <DependentUpon>CooperativeSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\CoopTemplateSearch.resx">
+      <DependentUpon>CoopTemplateSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\Procedimenti\ProcedimentiSearch.resx">
+      <DependentUpon>ProcedimentiSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\Revisioni\RevisioniDaEffettuareSearch.resx">
+      <DependentUpon>RevisioniDaEffettuareSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\Revisioni\RevisioniEffettuateSearch.resx">
+      <DependentUpon>RevisioniEffettuateSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\Sanzioni\LiquidazioneCoatta\LiquidazioneCoattaSearch.resx">
+      <DependentUpon>LiquidazioneCoattaSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\Sanzioni\LiquidazioneCoatta\RelazioneSemestraleSearch.resx">
+      <DependentUpon>RelazioneSemestraleSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\Sanzioni\ProceduraCoatta\ProceduraCoattaSearch.resx">
+      <DependentUpon>ProceduraCoattaSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\Sanzioni\SanzioniAmministrative\SanzioniSearch.resx">
+      <DependentUpon>SanzioniSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search\SubjectSearch.resx">
+      <DependentUpon>SubjectSearch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistics\CooperativeStatistics.resx">
+      <DependentUpon>CooperativeStatistics.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\CadenzaRevisione.resx">
+      <DependentUpon>CadenzaRevisione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\CadenzaRevisioneEdit.resx">
+      <DependentUpon>CadenzaRevisioneEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\Cartelle.resx">
+      <DependentUpon>Cartelle.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\CartelleEdit.resx">
+      <DependentUpon>CartelleEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\DizionarioEditWithDetail.resx">
+      <DependentUpon>DizionarioEditWithDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\EsitoRevisione.resx">
+      <DependentUpon>EsitoRevisione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\DatiEdit.resx">
+      <DependentUpon>DatiEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\Dati.resx">
+      <DependentUpon>Dati.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\GiudiciRicorsi.resx">
+      <DependentUpon>GiudiciRicorsi.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\LeggiTrasgressione.resx">
+      <DependentUpon>LeggiTrasgressione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\LeggiTrasgressioneEdit.resx">
+      <DependentUpon>LeggiTrasgressioneEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\LimitiCosto.resx">
+      <DependentUpon>LimitiCosto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\NumeroSociEdit.resx">
+      <DependentUpon>NumeroSociEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\NumeroSociDetail.resx">
+      <DependentUpon>NumeroSociDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\FormaGiuridica.resx">
+      <DependentUpon>FormaGiuridica.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\TipiConclusione.resx">
+      <DependentUpon>TipiConclusione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\TipiSospensione.resx">
+      <DependentUpon>TipiSospensione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\TipiIniziativa.resx">
+      <DependentUpon>TipiIniziativa.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\TipiProcedimento.resx">
+      <DependentUpon>TipiProcedimento.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\TipiSoggetto.resx">
+      <DependentUpon>TipiSoggetto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\ProceduraCoatta.resx">
+      <DependentUpon>ProceduraCoatta.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\Sottocategoria.resx">
+      <DependentUpon>Sottocategoria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\TipiAnnotazione.resx">
+      <DependentUpon>TipiAnnotazione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\TipiDocumentazione.resx">
+      <DependentUpon>TipiDocumentazione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\TipiAutorizzazione.resx">
+      <DependentUpon>TipiAutorizzazione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\TipiAttiIntegrativo.resx">
+      <DependentUpon>TipiAttiIntegrativo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\TipiCategoria.resx">
+      <DependentUpon>TipiCategoria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\TipiModificaStatutaria.resx">
+      <DependentUpon>TipiModificaStatutaria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\TipiIndirizzo.resx">
+      <DependentUpon>TipiIndirizzo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\DizionarioEdit.resx">
+      <DependentUpon>DizionarioEdit.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\TipiTrasgressione.resx">
+      <DependentUpon>TipiTrasgressione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\TipoRevisione.resx">
+      <DependentUpon>TipoRevisione.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vocabolari\VocabolariManager.resx">
+      <DependentUpon>VocabolariManager.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Repository\Common\Repository.Common.csproj">
+      <Project>{7D8449A8-CE00-4095-8CDE-3444A357C581}</Project>
+      <Name>Repository.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.AttivitaFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.BilancioFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.CambioPosizioneFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.CancellazioneFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.CollegamentoSocietaFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.CompensoFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.ControlloNumeroSociFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.ControlloNumeroSociFDT1.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.CooperativaFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.DeliberaAssembleaFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.DettaglioDizionarioFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.Dictionaries.CartellaFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.Dictionaries.DatiFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.Dictionaries.EsitoRevisioneFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.Dictionaries.LeggiTrasgressioneFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.Dictionaries.TipoRevisioneFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.DizionarioFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.DocumentazioneFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.GruppoPariteticoFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.LockFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.ModificaStatutariaFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.PersonaGiuridicaFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.ProcedimentoFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.ProceduraFallimentareFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.RegistroCooperativaFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.RevisioneFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.RevisioneIncaricoFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.SanzioneFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.ScadenziarioFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.SegnalazioneMDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.SoggettoFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.FDT.SoggettoPerVisualizzazioneFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.RicercheWrapper.CooperativaRicercaFDT.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.RicercheWrapper.CooperativaRicercaFDT1.datasource" />
+    <None Include="Properties\DataSources\it.dedagroup.GVC.Repository.Common.RicercheWrapper.RevisioneCooperativaFlatFDT.datasource" />
+    <None Include="Properties\DataSources\OeF.Configurations.DictionaryEntry.datasource" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

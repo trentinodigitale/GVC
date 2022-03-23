@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6E11CB8-4460-401F-90CF-495864CA8B20}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>it.dedagroup.GVC.Repository.rtier</RootNamespace>
+    <AssemblyName>it.dedagroup.GVC.Repository.rtier</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Stage|AnyCPU' ">
+    <OutputPath>bin\Stage\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Production|AnyCPU' ">
+    <OutputPath>bin\Production\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Logging, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Microsoft.Practices.EnterpriseLibrary.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Microsoft.Practices.EnterpriseLibrary.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Security.Cryptography, Version=3.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\Microsoft.Practices.EnterpriseLibrary.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="OeFLite, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Components\OeFLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GVCDGRUPPI_PARITETICICollection.cs" />
+    <Compile Include="Service\GVCDCARTELLE.generated.cs" />
+    <Compile Include="Service\GVCDCARTELLECollection.generated.cs" />
+    <Compile Include="Service\GVCDFORME_GIURIDICHE_PARIX.generated.cs" />
+    <Compile Include="Service\GVCDFORME_GIURIDICHE_PARIXCollection.generated.cs" />
+    <Compile Include="Service\GVCDGIUDICI_RICORSI.generated.cs" />
+    <Compile Include="Service\GVCDGIUDICI_RICORSICollection.generated.cs" />
+    <Compile Include="Service\GVCDGRUPPI_PARITETICI.generated.cs" />
+    <Compile Include="Service\GVCDGRUPPI_PARITETICICollection.generated.cs" />
+    <Compile Include="Service\GVCDLEGGI_TRASGRESSIONE.generated.cs" />
+    <Compile Include="Service\GVCDLEGGI_TRASGRESSIONECollection.generated.cs" />
+    <Compile Include="Service\GVCDLIMITI_COSTO.generated.cs" />
+    <Compile Include="Service\GVCDLIMITI_COSTOCollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_TRASGRESSIONE.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_TRASGRESSIONECollection.generated.cs" />
+    <Compile Include="Service\GVCRSOCIETA_GRUPPO.generated.cs" />
+    <Compile Include="Service\GVCRSOCIETA_GRUPPOCollection.generated.cs" />
+    <Compile Include="Service\GVCTATTIVITACollection.cs" />
+    <Compile Include="Service\GVCTSANZIONI.generated.cs" />
+    <Compile Include="Service\GVCTSANZIONICollection.generated.cs" />
+    <Compile Include="Service\GVCTLOCKCollection.cs" />
+    <Compile Include="Service\ExportXML\ExportCooperative.cs" />
+    <Compile Include="Service\ExportXML\ExportSoggetti.cs" />
+    <Compile Include="Service\GVCVCOOPERATIVEATTIVE.generated.cs" />
+    <Compile Include="Service\GVCVCOOPERATIVEATTIVECollection.generated.cs" />
+    <Compile Include="Service\GVCVCOOPERATIVECESSATE.generated.cs" />
+    <Compile Include="Service\GVCVCOOPERATIVECESSATECollection.cs" />
+    <Compile Include="Service\GVCVCOOPERATIVECESSATECollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCABILANCI.generated.cs" />
+    <Compile Include="Service\GVCVRICERCABILANCICollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCACOOPAVANZATA.generated.cs" />
+    <Compile Include="Service\GVCVRICERCACOOPAVANZATACollection.cs" />
+    <Compile Include="Service\GVCVRICERCACOOPAVANZATACollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCAREV_DAEFF.generated.cs" />
+    <Compile Include="Service\GVCVRICERCAREV_DAEFFCollection.cs" />
+    <Compile Include="Service\GVCVRICERCAREV_DAEFFCollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCASANZIONI.generated.cs" />
+    <Compile Include="Service\GVCVRICERCASANZIONICollection.cs" />
+    <Compile Include="Service\GVCVRICERCASANZIONICollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCASOGGETTIDAESPORTARECollection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Queries\Queries.cs" />
+    <Compile Include="Queries\SQLFilter.cs" />
+    <Compile Include="Queries\Strings.cs" />
+    <Compile Include="Service\GVCTLOCK.generated.cs" />
+    <Compile Include="Service\GVCTLOCKCollection.generated.cs" />
+    <Compile Include="Service\GVCVCERCAMODIFICHEPARIXCollection.cs" />
+    <Compile Include="Service\GVCTDOCUMENTAZIONECollection.cs" />
+    <Compile Include="Service\GVCTADESIONICollection.cs" />
+    <Compile Include="Service\GVCTDOCUMENTAZIONECollection.generated1.cs" />
+    <Compile Include="Service\GVCTSCIOGLIMENTO.generated.cs" />
+    <Compile Include="Service\GVCTSCIOGLIMENTOCollection.generated.cs" />
+    <Compile Include="Service\GVCVCERCAMODIFICHEPARIX.generated.cs" />
+    <Compile Include="Service\GVCVCERCAMODIFICHEPARIXCollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCAANNOTAZIONI.generated.cs" />
+    <Compile Include="Service\GVCVRICERCAANNOTAZIONICollection.cs" />
+    <Compile Include="Service\GVCVRICERCAANNOTAZIONICollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCABILANCICollection.cs" />
+    <Compile Include="Service\GVCVRICERCACANCELLAZIONI.generated.cs" />
+    <Compile Include="Service\GVCVRICERCACANCELLAZIONICollection.cs" />
+    <Compile Include="Service\GVCVRICERCACANCELLAZIONICollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCADOCUMENTAZIONE.generated.cs" />
+    <Compile Include="Service\GVCVRICERCADOCUMENTAZIONECollection.cs" />
+    <Compile Include="Service\GVCVRICERCADOCUMENTAZIONECollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCAFALLIMENTI.generated.cs" />
+    <Compile Include="Service\GVCVRICERCAFALLIMENTICollection.cs" />
+    <Compile Include="Service\GVCVRICERCAFALLIMENTICollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCALIQUIDAZIONI_COATTE.generated.cs" />
+    <Compile Include="Service\GVCVRICERCALIQUIDAZIONI_COATTECollection.cs" />
+    <Compile Include="Service\GVCVRICERCALIQUIDAZIONI_COATTECollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCAMODIFICHE_STAT.generated.cs" />
+    <Compile Include="Service\GVCVRICERCAMODIFICHE_STATCollection.cs" />
+    <Compile Include="Service\GVCVRICERCAMODIFICHE_STATCollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCAPROCEDIMENTI.generated.cs" />
+    <Compile Include="Service\GVCVRICERCAPROCEDIMENTICollection.cs" />
+    <Compile Include="Service\GVCVRICERCAPROCEDIMENTICollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCAPROCEDURE_COATTE.generated.cs" />
+    <Compile Include="Service\GVCVRICERCAPROCEDURE_COATTECollection.cs" />
+    <Compile Include="Service\GVCVRICERCAPROCEDURE_COATTECollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCAREV_EFF.generated.cs" />
+    <Compile Include="Service\GVCVRICERCAREV_EFFCollection.cs" />
+    <Compile Include="Service\GVCVRICERCAREV_EFFCollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCASOGGETTICollection.cs" />
+    <Compile Include="Service\GVCDTIPI_ANNOTAZIONE.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_ANNOTAZIONECollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_BILANCIO.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_BILANCIOCollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_CONCLUSIONE.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_CONCLUSIONECollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_DOCUMENTO.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_DOCUMENTOCollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_INIZIATIVA.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_INIZIATIVACollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_PROCEDIMENTO.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_PROCEDIMENTOCollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_SEGNALAZIONE.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_SEGNALAZIONECollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_SOSPENSIONE.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_SOSPENSIONECollection.generated.cs" />
+    <Compile Include="Service\GVCRUTENTI_RUOLICollection.cs" />
+    <Compile Include="Service\GVCTANNOTAZIONI.generated.cs" />
+    <Compile Include="Service\GVCTANNOTAZIONICollection.generated.cs" />
+    <Compile Include="Service\GVCTBILANCI.generated.cs" />
+    <Compile Include="Service\GVCTBILANCICollection.generated.cs" />
+    <Compile Include="Service\GVCTDOCUMENTAZIONE.generated.cs" />
+    <Compile Include="Service\GVCTFALLIMENTI.generated.cs" />
+    <Compile Include="Service\GVCTFALLIMENTICollection.generated.cs" />
+    <Compile Include="Service\GVCTLOG_SEGNALAZIONI.generated.cs" />
+    <Compile Include="Service\GVCTLOG_SEGNALAZIONICollection.generated.cs" />
+    <Compile Include="Service\GVCTPROCEDIMENTI.generated.cs" />
+    <Compile Include="Service\GVCTPROCEDIMENTICollection.generated.cs" />
+    <Compile Include="Service\GVCTSOGGETTICollection.cs" />
+    <Compile Include="Service\GVCTCAMBI_POSIZIONECollection.cs" />
+    <Compile Include="Service\GVC.cs" />
+    <Compile Include="Service\GVC.generated.cs" />
+    <Compile Include="Service\GVCDATECO.generated.cs" />
+    <Compile Include="Service\GVCDATECOCollection.generated.cs" />
+    <Compile Include="Service\GVCDCADENZA_REVISIONI.generated.cs" />
+    <Compile Include="Service\GVCDCADENZA_REVISIONICollection.generated.cs" />
+    <Compile Include="Service\GVCDCATEGORIE.generated.cs" />
+    <Compile Include="Service\GVCDCATEGORIECollection.generated.cs" />
+    <Compile Include="Service\GVCDDATI.generated.cs" />
+    <Compile Include="Service\GVCDDATICollection.generated.cs" />
+    <Compile Include="Service\GVCDESITI_REVISIONE.generated.cs" />
+    <Compile Include="Service\GVCDESITI_REVISIONECollection.generated.cs" />
+    <Compile Include="Service\GVCDFORMA_AMMINISTRATIVA.generated.cs" />
+    <Compile Include="Service\GVCDFORMA_AMMINISTRATIVACollection.generated.cs" />
+    <Compile Include="Service\GVCDFORME_GIURIDICHE.generated.cs" />
+    <Compile Include="Service\GVCDFORME_GIURIDICHECollection.generated.cs" />
+    <Compile Include="Service\GVCDSOTTOCATEGORIE.generated.cs" />
+    <Compile Include="Service\GVCDSOTTOCATEGORIECollection.generated.cs" />
+    <Compile Include="Service\GVCDSTATI_ISCRIZIONE.generated.cs" />
+    <Compile Include="Service\GVCDSTATI_ISCRIZIONECollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_ASSEMBLEA.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_ASSEMBLEACollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_ATTI.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_ATTICollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_AUTORIZZAZIONE.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_AUTORIZZAZIONECollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_CARICA.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_CARICACollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_COSTITUZIONE.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_COSTITUZIONECollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_INDIRIZZO.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_INDIRIZZOCollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_LIQ_COATTE.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_LIQ_COATTECollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_MODIFICA.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_MODIFICACollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_PROCEDURE_COATTE.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_PROCEDURE_COATTECollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_REVISIONE.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_REVISIONECollection.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_SOGGETTO.generated.cs" />
+    <Compile Include="Service\GVCDTIPI_SOGGETTOCollection.generated.cs" />
+    <Compile Include="Service\GVCRATTI_INTEGRATIVI.generated.cs" />
+    <Compile Include="Service\GVCRATTI_INTEGRATIVICollection.generated.cs" />
+    <Compile Include="Service\GVCRCARICHE.generated.cs" />
+    <Compile Include="Service\GVCRCARICHECollection.generated.cs" />
+    <Compile Include="Service\GVCRPROROGHE.generated.cs" />
+    <Compile Include="Service\GVCRPROROGHECollection.generated.cs" />
+    <Compile Include="Service\GVCRSOCIETA_COLLEGATE.generated.cs" />
+    <Compile Include="Service\GVCRSOCIETA_COLLEGATECollection.generated.cs" />
+    <Compile Include="Service\GVCRSOCI_CATEGORIA.generated.cs" />
+    <Compile Include="Service\GVCRSOCI_CATEGORIACollection.generated.cs" />
+    <Compile Include="Service\GVCRSOCI_FOG.generated.cs" />
+    <Compile Include="Service\GVCRSOCI_FOGCollection.generated.cs" />
+    <Compile Include="Service\GVCRUTENTI_RUOLI.generated.cs" />
+    <Compile Include="Service\GVCRUTENTI_RUOLICollection.generated.cs" />
+    <Compile Include="Service\GVCTADESIONI.generated.cs" />
+    <Compile Include="Service\GVCTADESIONICollection.generated.cs" />
+    <Compile Include="Service\GVCTATTIVITA.generated.cs" />
+    <Compile Include="Service\GVCTATTIVITACollection.generated.cs" />
+    <Compile Include="Service\GVCTAUTORIZZAZIONI.generated.cs" />
+    <Compile Include="Service\GVCTAUTORIZZAZIONICollection.generated.cs" />
+    <Compile Include="Service\GVCTCAMBI_POSIZIONE.generated.cs" />
+    <Compile Include="Service\GVCTCAMBI_POSIZIONECollection.generated.cs" />
+    <Compile Include="Service\GVCTCANCELLAZIONI.generated.cs" />
+    <Compile Include="Service\GVCTCANCELLAZIONICollection.generated.cs" />
+    <Compile Include="Service\GVCTCOMPENSI.generated.cs" />
+    <Compile Include="Service\GVCTCOMPENSICollection.generated.cs" />
+    <Compile Include="Service\GVCTCOM_BASE_SOCIALE.generated.cs" />
+    <Compile Include="Service\GVCTCOM_BASE_SOCIALECollection.generated.cs" />
+    <Compile Include="Service\GVCTCOM_CARICHE.generated.cs" />
+    <Compile Include="Service\GVCTCOM_CARICHECollection.generated.cs" />
+    <Compile Include="Service\GVCTCREDITI_FISCALI.generated.cs" />
+    <Compile Include="Service\GVCTCREDITI_FISCALICollection.generated.cs" />
+    <Compile Include="Service\GVCTDELIBERE_ASSEMBLEA.generated.cs" />
+    <Compile Include="Service\GVCTDELIBERE_ASSEMBLEACollection.generated.cs" />
+    <Compile Include="Service\GVCTINCARICHI.generated.cs" />
+    <Compile Include="Service\GVCTINCARICHICollection.generated.cs" />
+    <Compile Include="Service\GVCTINDIRIZZI.generated.cs" />
+    <Compile Include="Service\GVCTINDIRIZZICollection.generated.cs" />
+    <Compile Include="Service\GVCTLIQUIDAZIONE_COMPENSI.generated.cs" />
+    <Compile Include="Service\GVCTLIQUIDAZIONE_COMPENSICollection.generated.cs" />
+    <Compile Include="Service\GVCTLIQUIDAZIONI_COATTE.generated.cs" />
+    <Compile Include="Service\GVCTLIQUIDAZIONI_COATTECollection.generated.cs" />
+    <Compile Include="Service\GVCTMODIFICHE_STATUTARIE.generated.cs" />
+    <Compile Include="Service\GVCTMODIFICHE_STATUTARIECollection.generated.cs" />
+    <Compile Include="Service\GVCTPROCEDURE_COATTE.generated.cs" />
+    <Compile Include="Service\GVCTPROCEDURE_COATTECollection.generated.cs" />
+    <Compile Include="Service\GVCTREGISTRI.generated.cs" />
+    <Compile Include="Service\GVCTREGISTRICollection.generated.cs" />
+    <Compile Include="Service\GVCTRELAZIONI_SEMESTRALI.generated.cs" />
+    <Compile Include="Service\GVCTRELAZIONI_SEMESTRALICollection.generated.cs" />
+    <Compile Include="Service\GVCTREVISIONI.generated.cs" />
+    <Compile Include="Service\GVCTREVISIONICollection.generated.cs" />
+    <Compile Include="Service\GVCTSOGGETTI.generated.cs" />
+    <Compile Include="Service\GVCTSOGGETTICollection.generated.cs" />
+    <Compile Include="Service\GVCTSTORICO_ASSEMBLEA.generated.cs" />
+    <Compile Include="Service\GVCTSTORICO_ASSEMBLEACollection.generated.cs" />
+    <Compile Include="Service\GVCTSTORICO_REGISTRO.generated.cs" />
+    <Compile Include="Service\GVCTSTORICO_REGISTROCollection.generated.cs" />
+    <Compile Include="Service\GVCVDIZIONARI.generated.cs" />
+    <Compile Include="Service\GVCVDIZIONARICollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCASOGGETTI.generated.cs" />
+    <Compile Include="Service\GVCVRICERCASOGGETTICollection.generated.cs" />
+    <Compile Include="Service\GVCVRICERCASOGGETTIDAESPORTARE.generated.cs" />
+    <Compile Include="Service\GVCVRICERCASOGGETTIDAESPORTARECollection.generated.cs" />
+    <Compile Include="Service\GVCVSEGDAAPPLICARE.generated.cs" />
+    <Compile Include="Service\GVCVSEGDAAPPLICARECollection.cs" />
+    <Compile Include="Service\GVCVSEGDAAPPLICARECollection.generated.cs" />
+    <Compile Include="Service\GVC_PARIX_UPD.generated.cs" />
+    <Compile Include="Service\GVC_PARIX_UPDCollection.generated.cs" />
+    <Compile Include="Service\Search\SearchCooperative.cs" />
+    <Compile Include="Service\Statistics\StatisticsCooperative.cs" />
+    <Compile Include="Service\StoredProcedure.generated.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
